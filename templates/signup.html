@@ -51,6 +51,14 @@
                         <div class="cover-user-img d-flex align-items-center">
                             <div class="row">
                                 <div class="col-12">
+                                    {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                        <div class="notification is-danger">
+                                            {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}">login page</a>.
+                                        </div>
+                                    {% endif %}
+                                    {% endwith %}
+                                    <form action="{{  url_for('auth.signup') }}" method="POST">
                                     <div class="card login_page border-0" style="z-index: 1">
                                         <div class="card-body p-0">
                                             <h4 class="card-title text-center">Signup</h4>
@@ -60,7 +68,7 @@
                                                         <div class="form-group position-relative">                                               
                                                             <label>First name <span class="text-danger">*</span></label>
                                                             <i data-feather="user" class="fea icon-sm icons"></i>
-                                                            <input type="text" class="form-control pl-5" placeholder="First Name" name="s" required="">
+                                                            <input name="first_name" type="text" class="form-control pl-5" placeholder="First Name" name="s" required="">
                                                         </div>
                                                     </div><!--end col-->
 
@@ -68,7 +76,7 @@
                                                         <div class="form-group position-relative">                                                
                                                             <label>Last name <span class="text-danger">*</span></label>
                                                             <i data-feather="user-check" class="fea icon-sm icons"></i>
-                                                            <input type="text" class="form-control pl-5" placeholder="Last Name" name="s" required="">
+                                                            <input name="surname" type="text" class="form-control pl-5" placeholder="Last Name" name="s" required="">
                                                         </div>
                                                     </div><!--end col-->
 
@@ -76,7 +84,7 @@
                                                         <div class="form-group position-relative">
                                                             <label>Your Email <span class="text-danger">*</span></label>
                                                             <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                            <input type="email" class="form-control pl-5" placeholder="Email" name="email" required="">
+                                                            <input name="email" type="email" class="form-control pl-5" placeholder="Email" name="email" required="">
                                                         </div>
                                                     </div><!--end col-->
 
@@ -84,7 +92,7 @@
                                                         <div class="form-group position-relative">
                                                             <label>Password <span class="text-danger">*</span></label>
                                                             <i data-feather="key" class="fea icon-sm icons"></i>
-                                                            <input type="password" class="form-control pl-5" placeholder="Password" required="">
+                                                            <input name="password" type="password" class="form-control pl-5" placeholder="Password" required="">
                                                         </div>
                                                     </div><!--end col-->
 
@@ -98,7 +106,7 @@
                                                     </div><!--end col-->
 
                                                     <div class="col-md-12">
-                                                        <button class="btn btn-primary btn-block">Register</button>
+                                                        <button type="submit" value="Submit" class="btn btn-primary btn-block">Register</button>
                                                     </div><!--end col-->
 
                                                     <div class="col-lg-12 mt-4 text-center">
@@ -112,6 +120,7 @@
                                             </form>  
                                         </div>
                                     </div>
+                                </form>
                                 </div>
                             </div><!--end row-->
                         </div> <!-- end about detail -->
