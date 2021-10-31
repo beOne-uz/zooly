@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 @auth.route('/', methods=['GET', 'POST'])
 def login():
+
     if request.method == 'GET':
         return render_template('login.html')
     elif request.method == 'POST':
@@ -22,7 +23,7 @@ def login():
             return redirect(url_for('auth.login')) # if the user doesn't exist or password is wrong, reload the page
 
         # if the above check passes, then we know the user has the right credentials
-        return redirect(url_for('auth.profile'))
+        return redirect(url_for('admin.admin_panel'))
     
 
 @auth.route('/profile')

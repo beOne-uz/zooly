@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Login Page - Zooly</title>
+    <title>Зарегистрироваться - Zooly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
     <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
@@ -61,38 +61,38 @@
                                     <form action="{{  url_for('auth.signup') }}" method="POST">
                                     <div class="card login_page border-0" style="z-index: 1">
                                         <div class="card-body p-0">
-                                            <h4 class="card-title text-center">Signup</h4>
+                                            <h4 class="card-title text-center">Зарегистрироваться</h4>
                                             <form class="login-form mt-4">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group position-relative">                                               
-                                                            <label>First name <span class="text-danger">*</span></label>
+                                                            <label>Имя <span class="text-danger">*</span></label>
                                                             <i data-feather="user" class="fea icon-sm icons"></i>
-                                                            <input name="first_name" type="text" class="form-control pl-5" placeholder="First Name" name="s" required="">
+                                                            <input name="first_name" type="text" class="form-control pl-5" placeholder="Имя" name="s" required="">
                                                         </div>
                                                     </div><!--end col-->
 
                                                     <div class="col-md-6">
                                                         <div class="form-group position-relative">                                                
-                                                            <label>Last name <span class="text-danger">*</span></label>
+                                                            <label>Фамилия <span class="text-danger">*</span></label>
                                                             <i data-feather="user-check" class="fea icon-sm icons"></i>
-                                                            <input name="surname" type="text" class="form-control pl-5" placeholder="Last Name" name="s" required="">
+                                                            <input name="surname" type="text" class="form-control pl-5" placeholder="Фамилия" name="s" required="">
                                                         </div>
                                                     </div><!--end col-->
 
                                                     <div class="col-md-12">
                                                         <div class="form-group position-relative">
-                                                            <label>Your Email <span class="text-danger">*</span></label>
+                                                            <label>Ваш адрес электронной почты <span class="text-danger">*</span></label>
                                                             <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                            <input name="email" type="email" class="form-control pl-5" placeholder="Email" name="email" required="">
+                                                            <input name="email" type="email" class="form-control pl-5" placeholder="Эл. адрес" name="email" required="">
                                                         </div>
                                                     </div><!--end col-->
 
                                                     <div class="col-md-12">
                                                         <div class="form-group position-relative">
-                                                            <label>Password <span class="text-danger">*</span></label>
+                                                            <label>Пароль <span class="text-danger">*</span></label>
                                                             <i data-feather="key" class="fea icon-sm icons"></i>
-                                                            <input name="password" type="password" class="form-control pl-5" placeholder="Password" required="">
+                                                            <input name="password" type="password" class="form-control pl-5" placeholder="Пароль" required="">
                                                         </div>
                                                     </div><!--end col-->
 
@@ -100,13 +100,13 @@
                                                         <div class="form-group">
                                                             <div class="custom-control custom-checkbox">
                                                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                                <label class="custom-control-label" for="customCheck1">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
+                                                                <label class="custom-control-label" for="customCheck1">Я принимаю <a href="#" class="text-primary">условия и положения</a></label>
                                                             </div>
                                                         </div>
                                                     </div><!--end col-->
 
                                                     <div class="col-md-12">
-                                                        <button type="submit" value="Submit" class="btn btn-primary btn-block">Register</button>
+                                                        <button type="submit" value="Submit" class="btn btn-primary btn-block">Регистрировать</button>
                                                     </div><!--end col-->
 
                                                     <div class="col-lg-12 mt-4 text-center">
@@ -114,7 +114,7 @@
                                                     </div><!--end col-->
 
                                                     <div class="mx-auto">
-                                                        <p class="mb-0 mt-3"><small class="text-dark mr-2">Already have an account ?</small> <a href="{{ url_for('auth.login')}}" class="text-dark font-weight-bold">Sign in</a></p>
+                                                        <p class="mb-0 mt-3"><small class="text-dark mr-2">Уже есть аккаунт?</small> <a href="{{ url_for('auth.login')}}" class="text-dark font-weight-bold">Войти</a></p>
                                                     </div>
                                                 </div><!--end row-->
                                             </form>  
@@ -125,8 +125,8 @@
                             </div><!--end row-->
                         </div> <!-- end about detail -->
                     </div> <!-- end col -->    
-
-                    <div class="col-lg-8 offset-lg-4 padding-less img order-1" style="background-image:url( {{ url_for('static', filename='images/user/02.jpg') }} )" data-jarallax='{"speed": 0.5}'></div><!-- end col -->    
+                    <!-- {{ url_for('static', filename='images/user/02.jpg') }} -->
+                    <div class="col-lg-8 offset-lg-4 padding-less img order-1" style="background-image:url( {{ url_for('static', filename='images/user/background_signup.jpg') }} )" data-jarallax='{"speed": 0.5}'></div><!-- end col -->    
                 </div><!--end row-->
             </div><!--end container fluid-->
         </section><!--end section-->
